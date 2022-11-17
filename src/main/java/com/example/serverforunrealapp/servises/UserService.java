@@ -1,4 +1,4 @@
-package com.example.serverforunrealapp.controllers;
+package com.example.serverforunrealapp.servises;
 
 import com.example.serverforunrealapp.models.UserModel;
 import com.example.serverforunrealapp.repos.UserRepo;
