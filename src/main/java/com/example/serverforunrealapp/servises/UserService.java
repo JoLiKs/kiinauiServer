@@ -1,3 +1,5 @@
+package com.example.serverforunrealapp.controllers;
+
 import com.example.serverforunrealapp.models.UserModel;
 import com.example.serverforunrealapp.repos.UserRepo;
 import org.springframework.stereotype.Service;
