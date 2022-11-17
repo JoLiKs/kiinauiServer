@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepo extends JpaRepository<UserModel, Long> {
     UserModel findUserModelByLogin(String login);
+    @Query(value = "select login from user_app", nativeQuery = true)
+    List<String> findLogins();
 }
