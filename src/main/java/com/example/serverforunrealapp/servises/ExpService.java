@@ -17,8 +17,8 @@ public class ExpService {
     }
 
     public String expDel(int mory){
-        if (mory > 1000) return expenseRepo.deleteExpenseModelByYear(mory);
-        return expenseRepo.deleteExpenseModelByMonth(mory);
+        if (mory > 1000) return expenseRepo.deleteByYear(mory);
+        return expenseRepo.deleteByMonth(mory);
     }
 
     public boolean add(double sum, long time, int day, int month, int year, UserModel userModel) {
