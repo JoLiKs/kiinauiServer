@@ -22,7 +22,12 @@ public class ExpService {
     }
 
     public boolean add(double sum, long time, int day, int month, int year, UserModel userModel) {
-        ExpenseModel expenseModel = new ExpenseModel(sum, time, day, month, year, userModel);
+        ExpenseModel expenseModel = new ExpenseModel();
+        expenseModel.setSum(sum);
+        expenseModel.setTime(time);
+        expenseModel.setDay(day);
+        expenseModel.setMonth(month);
+        expenseModel.setYear(year);
         expenseRepo.save(expenseModel);
         return true;
     }
