@@ -10,8 +10,8 @@ import java.util.List;
 public interface ExpenseRepo extends JpaRepository<ExpenseModel, Long> {
 
     String deleteExpenseModelById(long id);
-    String deleteExpenseModelByMonth(int month);
-    String deleteExpenseModelByYear(int year);
+    String deleteByMonth(int month);
+    String deleteByYear(int year);
     ExpenseModel findExpenseModelByMonth(int month);
     ExpenseModel findExpenseModelByYear(int year);
     @Modifying
