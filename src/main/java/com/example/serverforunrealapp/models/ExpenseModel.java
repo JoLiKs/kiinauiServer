@@ -30,12 +30,4 @@ public class ExpenseModel {
     @ManyToOne
     UserModel userModel;
     
-        public ExpenseModel(double sum, long time, int day, int month, int year, UserModel userModel) {
-        this.sum = sum;
-        this.time = time;
-        this.day = day;
-        this.month = month;
-        this.year = year;
-        this.userModel = userModel;
-    }
 }
