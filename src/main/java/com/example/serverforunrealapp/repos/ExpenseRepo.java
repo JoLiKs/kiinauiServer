@@ -16,9 +16,9 @@ public interface ExpenseRepo extends JpaRepository<ExpenseModel, Long> {
     ExpenseModel findExpenseModelByYear(int year);
     @Modifying
     @Query(value = "update ExpenseModel e set e.sum = ?1 where e.month = ?2")
-    String editSumByMonth(double sum, int month);
+    int editSumByMonth(double sum, int month);
     @Modifying
     @Query(value = "update ExpenseModel e set e.sum = ?1 where e.year = ?2")
-    String editSumByYear(double sum, int year);
+    int editSumByYear(double sum, int year);
 
 }
