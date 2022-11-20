@@ -8,9 +8,11 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 public interface ExpenseRepo extends JpaRepository<ExpenseModel, Long> {
-
+    @Transactional
     String deleteExpenseModelById(long id);
+    @Transactional
     String deleteByMonth(int month);
+    @Transactional
     String deleteByYear(int year);
     ExpenseModel findExpenseModelByMonth(int month);
     ExpenseModel findExpenseModelByYear(int year);
