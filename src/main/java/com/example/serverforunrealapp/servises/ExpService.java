@@ -32,8 +32,8 @@ public class ExpService {
         return true;
     }
     public String edit(double sum, int mory) {
-        if (mory > 1000) return expenseRepo.editSumByYear(sum, mory);
-        return expenseRepo.editSumByMonth(sum, mory);
+        if (mory > 1000) return String.valueOf(expenseRepo.editSumByYear(sum, mory));
+        return String.valueOf(expenseRepo.editSumByMonth(sum, mory));
     }
 
     public double getSum(int mory) {
