@@ -4,7 +4,7 @@ import com.example.serverforunrealapp.models.UserModel;
 import com.example.serverforunrealapp.repos.UserRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import org.json.JSONObject;
 import java.util.List;
 
 @Service
@@ -38,7 +38,7 @@ public class UserService {
         if (userModel==null){
             return "no user";
         }else if (userModel.getPassword().equals(password)){
-            return userModel.toString();
+            return new JSONObject(userModel.toString()).toString();
         }
         return "not correct password";
     }
