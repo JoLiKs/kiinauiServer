@@ -29,7 +29,7 @@ public class UserModel {
     
     @Override
     public String toString() {
-        return "UserModel{" +
+        return "{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
