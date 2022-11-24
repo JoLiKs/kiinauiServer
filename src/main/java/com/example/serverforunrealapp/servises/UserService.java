@@ -40,7 +40,7 @@ public class UserService {
         }else if (userModel.getPassword().equals(password)){
            JSONObject jsonObject = new JSONObject();
             jsonObject.put("UserModel", userModel.toString());
-            return jsonObject.toString();
+            return jsonObject.toString().replace("\"", "");
         }
         return "not correct password";
     }
