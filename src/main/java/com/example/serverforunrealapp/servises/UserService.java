@@ -38,9 +38,9 @@ public class UserService {
         if (userModel==null){
             return "no user";
         }else if (userModel.getPassword().equals(password)){
-           StringBuilder jsonString = new StringBuilder();
-            jsonString.append(userModel);
-            return new JSONObject(jsonString).toString();
+           JSONObject jsonObject = new JSONObject();
+            jsonObject.put("", userModel.toString());
+            return jsonObject.toString();
         }
         return "not correct password";
     }
