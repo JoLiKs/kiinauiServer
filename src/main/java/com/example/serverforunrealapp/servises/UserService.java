@@ -44,4 +44,22 @@ public class UserService {
         }
         return "not correct password";
     }
+    public boolean editName(long id, String newName) {
+        UserModel userModel = userRepo.getUserModelById(id);
+        userModel.setName(newName);
+        userRepo.save(userModel);
+        return true;
+    }
+    public boolean editLastName(long id, String newLastName) {
+        UserModel userModel = userRepo.getUserModelById(id);
+        userModel.setLastName(newLastName);
+        userRepo.save(userModel);
+        return true;
+    }
+    public boolean editUrl(long id, String url) {
+        UserModel userModel = userRepo.getUserModelById(id);
+        userModel.setUrl(url);
+        userRepo.save(userModel);
+        return true;
+    }
 }
